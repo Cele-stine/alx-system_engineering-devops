@@ -1,1 +1,1 @@
-Script the ls command
+Change to home directory
