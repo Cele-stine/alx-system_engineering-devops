@@ -1,1 +1,1 @@
-List user and group IDs numericaly
+moving directory
