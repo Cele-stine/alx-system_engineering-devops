@@ -1,1 +1,1 @@
-Print working directory
+Script the ls command
