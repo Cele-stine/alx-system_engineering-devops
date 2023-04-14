@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -u *.html
+find . -maxdepth 1 -name ".html" -type f -exec sh -c "if [! -f"../$(basename "$0")" cp "$0" "../$(basename "$0")" fi {} \
