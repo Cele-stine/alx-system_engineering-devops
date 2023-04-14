@@ -1,1 +1,1 @@
-Long format file
+period character listing
