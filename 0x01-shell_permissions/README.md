@@ -1,1 +1,1 @@
-mirror permissions
+derectory permissions
