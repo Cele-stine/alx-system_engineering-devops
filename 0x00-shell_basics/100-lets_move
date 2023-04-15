@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -typef -regextype posix-extended -regex "./[A-Z].*" -exec mv {} /tmp/u "+"
