@@ -1,1 +1,1 @@
-My first_readme
+shell init files,variables and expansions
