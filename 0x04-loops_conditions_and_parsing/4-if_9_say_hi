@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Bash script that prints "Best School" 10 times with a while loop but prints
+# Hi after the nine loop.
+count=0
+while [ $count -lt 10 ]
+do
+	if [ $count -eq 8 ]
+	then
+		echo "Best School"
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+	count=$((count + 1))
+done
