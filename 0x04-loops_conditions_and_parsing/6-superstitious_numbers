@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# A bash script that prints numbers from 1 to 20 but on the after the fourth
+# number "bad luck from China", after the 8th "bad luck from Japan" and on the
+# 17th "bad luck fron Italy".
+count=1
+while [ $count -le 20 ]
+	do
+
+  case $count in
+    4)
+      echo $count
+      echo "and then bad luck from China"
+      ;;
+    9)
+      echo $count	    
+      echo "and then bad luck from Japan"
+      ;;
+    17)
+      echo $count
+      echo "and then bad luck from Italy"
+      ;;
+    *)
+      echo $count
+      ;;
+  esac
+
+  count=$((count + 1))
+done
