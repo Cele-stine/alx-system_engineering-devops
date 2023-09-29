@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Make a story out of the contents of /etc/passwd file.
+while IFS=: read -r username password uid gid user_info home directory shell
+do
+	echo "The user $username is part of $gid gang, lives in $home_directory and rides $shell. User ID's place is protected by the passcode $password, more info about user here: $uid $user_info"
+	echo
+done < /etc/passwd
