@@ -17,7 +17,7 @@ def get_todo_list_progress(employee_id):
         return
 
     employee_data = response.json()
-    employee_name = employee_data['name']
+    name = employee_data['name']
 
     # GET employee todo list
     response = requests.get(f"{url}/todos?userId={employee_id}")
@@ -27,11 +27,11 @@ def get_todo_list_progress(employee_id):
 
     todo_list = response.json()
 
-    DONE_TASKS = sum(1 for task in todo_list if task['completed'])
+    D_TKS = sum(1 for task in todo_list if task['completed'])
 
     TASKS = len(todo_list)
 
-    print("Employee {} is done with tasks({}/{}):".format(employee_name, DONE_TASKS, TASKS))
+    print("Employee {} is done with tasks({}/{}):".format(name, D_TKS, TASKS))
 
     # print titles of completed tasks
     for task in todo_list:
