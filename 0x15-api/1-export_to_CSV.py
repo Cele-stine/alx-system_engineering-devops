@@ -42,8 +42,8 @@ def get_todo_list_progress(employee_id):
     with open(csv_filename, "w", newline="") as csvfile:
         csv_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in todo_list:
-            csv_writer.writerow([employee_id, username, str(task['completed']).lower(), 
-                task['title']])
+            csv_writer.writerow([employee_id, username, str(task['completed'])
+                .lower(), task['title']])
     print(f"\nData exported to {csv_filename}")
 
 
