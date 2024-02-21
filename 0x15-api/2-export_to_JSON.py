@@ -2,9 +2,11 @@
 
 """export data in the JSON format."""
 
+
 import json
 import requests
 import sys
+
 
 def get_employee_todo_progress(employee_id):
 
@@ -47,6 +49,7 @@ def get_employee_todo_progress(employee_id):
     print(f"\nData exported to {json_filename}")
 
 if __name__ == "__main__":
+
 
     if len(sys.argv) != 2:
         print("Usage: python script.py <employee_id>")
