@@ -2,11 +2,12 @@
 
 """export data in the JSON format."""
 
-import requests
 import json
+import requests
 import sys
 
 def get_employee_todo_progress(employee_id):
+
     # Define the base URL of the API
     base_url = "https://jsonplaceholder.typicode.com"
 
@@ -35,8 +36,8 @@ def get_employee_todo_progress(employee_id):
     }
     for task in todo_list:
         json_data[str(employee_id)].append({"task": task["title"], "completed":
-                                     str(task['completed']).lower(),
-                                     "username": username})
+                                            str(task['completed']).lower(),
+                                            "username": username})
 
     # Export data to JSON file
     json_filename = f"{employee_id}.json"
@@ -46,6 +47,7 @@ def get_employee_todo_progress(employee_id):
     print(f"\nData exported to {json_filename}")
 
 if __name__ == "__main__":
+
     if len(sys.argv) != 2:
         print("Usage: python script.py <employee_id>")
         sys.exit(1)
