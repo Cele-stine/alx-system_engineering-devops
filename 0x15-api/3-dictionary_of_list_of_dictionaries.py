@@ -57,4 +57,3 @@ if __name__ == "__main__":
         export_todo_to_json(json_data)
     else:
         print("No data to export.")
-
