@@ -8,10 +8,11 @@ import requests
 
 def get_all_employees_todo():
     # Define the base URL of the API
-    base_url = "https://jsonplaceholder.typicode.com"
+    userurl = "https://jsonplaceholder.typicode.com/users"
+    todourl = "https://jsonplaceholder.typicode.com/todos"
 
     # Make a GET request to retrieve all users
-    response = requests.get(f"{base_url}/users")
+    response = requests.get(userurl)
     if response.status_code != 200:
         print("Error: Failed to retrieve employee information")
         return {}
@@ -22,7 +23,7 @@ def get_all_employees_todo():
     json_data = {}
     for user in users:
         # Make a GET request to retrieve employee's TODO list
-        response = requests.get(f"{base_url}/todos?userId={user['id']}")
+        response = requests.get(todourl)
         if response.status_code != 200:
             print(f"Error: Failed to retrieve TODO list for user {user['id']}")
             continue
